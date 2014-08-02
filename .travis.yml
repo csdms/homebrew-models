@@ -13,3 +13,6 @@ install:
   - brew install sedflux --HEAD
   - brew test sedflux
   - brew install cem --HEAD
+  - brew install adi2d --HEAD
+  - brew install aquatellus --HEAD
+  - brew install flowvel2d --HEAD
