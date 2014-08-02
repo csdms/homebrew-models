@@ -2,7 +2,8 @@ require "formula"
 
 class Cem < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:CEM"
-  head "https://csdms.colorado.edu/svn/cem/trunk", :using => :svn
+  head "https://csdms.colorado.edu/svn/cem/trunk",
+    :using => UnsafeSubversionDownloadStrategy
 
   depends_on "glib"
   depends_on "cmake" => :build
