@@ -8,5 +8,7 @@ before_install:
 install:
   - brew tap csdms/models
   - brew tap --repair
-  - brew install hydrotrend sedflux
-  - brew test hydrotrend sedflux
+  - brew install hydrotrend
+  - brew test hydrotrend
+  - brew install sedflux --HEAD
+  - brew test sedflux
