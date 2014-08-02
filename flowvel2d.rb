@@ -8,6 +8,8 @@ class Flowvel2d < Formula
   depends_on :fortran
 
   def install
+    inreplace "Makefile", /gfortran/, "\${FC}"
+
     system "make"
     bin.install "2dflowvel"
   end
