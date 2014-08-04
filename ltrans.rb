@@ -6,7 +6,7 @@ class Ltrans < Formula
     :using => UnsafeSubversionDownloadStrategy
 
   depends_on :fortran
-  depends_on "netcdf" => "enable-fortran"
+  depends_on "homebrew/science/netcdf" => "enable-fortran"
 
   def install
     ENV.deparallelize  # if your formula fails when building in parallel
