@@ -18,3 +18,4 @@ install:
   - brew install flowvel2d --HEAD
   - brew install csdms/models/storm --HEAD
   - brew install flex1d flex2d flex2d-adi --HEAD
+  - brew install ltrans marssim --HEAD
