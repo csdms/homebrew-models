@@ -1,18 +1,21 @@
 require "formula"
 
-class Child < Formula
-  version "1.0"
-  homepage ""
-  url "https://csdms.colorado.edu/svn/child/trunk/Child/Code",
+class Marssim < Formula
+  homepage "http://csdms.colorado.edu/wiki/Model:MARSSIM"
+  head "https://csdms.colorado.edu/svn/marssim/trunk",
     :using => UnsafeSubversionDownloadStrategy
-  sha1 ""
 
   depends_on "cmake" => :build
+  depends_on :fortran
 
   def install
+    ENV.deparallelize
+
     system "cmake", ".", *std_cmake_args
     system "make"
     system "make", "install"
+
+    bin.install "src/run_marssim" => "marssim"
   end
 
   test do

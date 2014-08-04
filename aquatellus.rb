@@ -1,13 +1,12 @@
 require "formula"
 
-class Child < Formula
-  version "1.0"
-  homepage ""
-  url "https://csdms.colorado.edu/svn/child/trunk/Child/Code",
+class Aquatellus < Formula
+  homepage "http://csdms.colorado.edu/wiki/Model:AquaTellUs"
+  head "https://csdms.colorado.edu/svn/aquatellus/trunk",
     :using => UnsafeSubversionDownloadStrategy
-  sha1 ""
 
   depends_on "cmake" => :build
+  depends_on "pkgconfig" => :build
 
   def install
     system "cmake", ".", *std_cmake_args

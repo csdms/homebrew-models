@@ -1,0 +1,21 @@
+language: objective-c
+
+before_install:
+  - brew update
+  - /usr/bin/which ruby
+  - ruby --version
+
+install:
+  - brew tap csdms/models
+  - brew tap --repair
+  - brew install hydrotrend child
+  - brew test hydrotrend
+  - brew install sedflux --HEAD
+  - brew test sedflux
+  - brew install cem --HEAD
+  - brew install adi2d --HEAD
+  - brew install aquatellus --HEAD
+  - brew install flowvel2d --HEAD
+  - brew install csdms/models/storm --HEAD
+  - brew install flex1d flex2d flex2d-adi --HEAD
+  - brew install ltrans marssim --HEAD
