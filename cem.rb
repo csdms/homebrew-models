@@ -5,7 +5,7 @@ class Cem < Formula
   head "https://csdms.colorado.edu/svn/cem/trunk",
     :using => UnsafeSubversionDownloadStrategy
 
-  depends_on "glib"
+  depends_on "csdms/dupes/glib"
   depends_on "cmake" => :build
   depends_on "pkgconfig" => :build
 
