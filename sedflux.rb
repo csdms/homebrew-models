@@ -6,7 +6,7 @@ class Sedflux < Formula
   sha1 ""
 
   depends_on "cmake" => :build
-  depends_on "glib"
+  depends_on "csdms/dupes/glib"
 
   def install
     system "cmake", ".", *std_cmake_args
