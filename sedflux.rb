@@ -5,6 +5,7 @@ class Sedflux < Formula
   head "https://github.com/mcflugen/sedflux.git"
   sha1 ""
 
+  depends_on "pkgconfig" => :build
   depends_on "cmake" => :build
   depends_on "csdms/dupes/glib"
 
