@@ -2,7 +2,7 @@ require "formula"
 
 class Sedflux < Formula
   homepage "https://github.com/mcflugen/sedflux"
-  head "https://github.com/mcflugen/sedflux.git"
+  head "https://github.com/csdms-contrib/sedflux.git"
   sha1 ""
 
   depends_on "pkgconfig" => :build
