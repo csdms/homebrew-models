@@ -14,8 +14,9 @@ class Wrf < Formula
     ENV['NETCDF'] = Formula['netcdf'].prefix
 
     Open3.popen3("./configure") do |stdin, stdout, _|
-      stdin.write "15\n"
-      stdin.write "0\n"
+      stdin.write "15\n" unless OS.linux? # Darwin, serial
+      stdin.write "32\n" if OS.linux? # Linux, serial
+      stdin.write "0\n" # no nesting
       !!(stdout.read)
     end
     system "./compile em_real"
