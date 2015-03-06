@@ -5,11 +5,14 @@ class Storm < Formula
   head "https://github.com/csdms-contrib/storm.git"
   sha1 ""
 
+  option "with-check", "Run tests before installing"
+
   depends_on "cmake" => :build
 
   def install
     system "cmake", ".", *std_cmake_args
     system "make"
+    system "make", "test" if build.with? "check"
     system "make", "install"
   end
 
