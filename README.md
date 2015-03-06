@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/csdms/homebrew-models.svg?branch=master)](https://travis-ci.org/csdms/homebrew-models)
+
 homebrew-models
 ===============
 
