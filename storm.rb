@@ -2,7 +2,7 @@ require "formula"
 
 class Storm < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:STORM"
-  head "https://github.com/csdms-contrib/storm",
+  head "https://github.com/csdms-contrib/storm"
   sha1 ""
 
   depends_on "cmake" => :build
