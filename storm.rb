@@ -14,6 +14,7 @@ class Storm < Formula
   end
 
   test do
-    system "make", "test"
+    system "#{bin}/storm", "#{share}/storm/data/test1.in"
+    assert_equal 4, `ls *.out | wc -l`.to_i
   end
 end
