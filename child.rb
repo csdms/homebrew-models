@@ -3,16 +3,17 @@ require "formula"
 class Child < Formula
   version "1.0"
   homepage ""
-  url "https://csdms.colorado.edu/svn/child/trunk/Child/Code",
-    :using => UnsafeSubversionDownloadStrategy
+  head "https://github.com/childmodel/child.git"
   sha1 ""
 
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make"
-    system "make", "install"
+    cd "Child/Code" do
+      system "cmake", ".", *std_cmake_args
+      system "make"
+      system "make", "install"
+    end
   end
 
   test do
