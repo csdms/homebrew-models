@@ -2,8 +2,8 @@ require "formula"
 
 class Cem < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:CEM"
-  head "https://csdms.colorado.edu/svn/cem/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  url "https://github.com/csdms/cem-old.git", :tag => "0.2"
+  head "https://github.com/csdms/cem-old.git"
 
   depends_on "csdms/dupes/glib"
   depends_on "cmake" => :build

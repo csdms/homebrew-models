@@ -2,8 +2,8 @@ require "formula"
 
 class Flex2dAdi < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:Flex2D-ADI"
-  head "https://csdms.colorado.edu/svn/flex2d-adi/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  url "https://github.com/csdms-contrib/flex2d-adi.git", :tag => "0.1"
+  head "https://github.com/csdms-contrib/flex2d-adi.git"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

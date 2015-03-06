@@ -2,8 +2,8 @@ require "formula"
 
 class Marssim < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:MARSSIM"
-  head "https://csdms.colorado.edu/svn/marssim/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  url "https://github.com/csdms/marssim.git", :tag => "3.0.0"
+  head "https://github.com/csdms/marssim.git"
 
   depends_on "cmake" => :build
   depends_on :fortran

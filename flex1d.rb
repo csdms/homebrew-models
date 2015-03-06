@@ -2,8 +2,8 @@ require "formula"
 
 class Flex1d < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:Flex1D"
-  head "https://csdms.colorado.edu/svn/flex1d/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  url "https://github.com/csdms-contrib/flex1d.git", :tag => "0.1"
+  head "https://github.com/csdms-contrib/flex1d.git"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build

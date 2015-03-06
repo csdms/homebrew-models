@@ -2,8 +2,8 @@ require "formula"
 
 class Flowvel2d < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:2DFLOWVEL"
-  head "https://csdms.colorado.edu/svn/2dflowvel/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  url "https://github.com/csdms-contrib/2dflowvel.git", :tag => "0.1"
+  head "https://github.com/csdms-contrib/2dflowvel.git"
 
   depends_on :fortran
 
