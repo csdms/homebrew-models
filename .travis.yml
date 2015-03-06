@@ -12,12 +12,14 @@ install:
   - brew test hydrotrend
   - brew install child --HEAD
   - brew install sedflux --HEAD
-  - brew test sedflux
+  - brew test sedflux --HEAD
   - brew install cem --HEAD
+  - brew test cem --HEAD
   - brew install adi2d --HEAD
   - brew install aquatellus --HEAD
   - brew install flowvel2d --HEAD
   - brew install csdms/models/storm --HEAD
-  - brew test csdms/models/storm
+  - brew test csdms/models/storm --HEAD
   - brew install flex1d flex2d flex2d-adi --HEAD
+  - brew test flex1d flex2d flex2d-adi --HEAD
   - brew install marssim --HEAD
