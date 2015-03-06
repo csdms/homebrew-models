@@ -2,19 +2,18 @@ require "formula"
 
 class Storm < Formula
   homepage "http://csdms.colorado.edu/wiki/Model:STORM"
-  head "https://csdms.colorado.edu/svn/storm/trunk",
-    :using => UnsafeSubversionDownloadStrategy
+  head "https://github.com/csdms-contrib/storm",
+  sha1 ""
 
-  depends_on :fortran
+  depends_on "cmake" => :build
 
   def install
-    inreplace "Makefile", /gfortran/, "\${FC}"
-
+    system "cmake", ".", *std_cmake_args
     system "make"
-    bin.install "storm"
+    system "make", "install"
   end
 
   test do
-    system "false"
+    system "make", "test"
   end
 end
