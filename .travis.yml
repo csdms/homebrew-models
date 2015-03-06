@@ -8,8 +8,9 @@ before_install:
 install:
   - brew tap csdms/models
   - brew tap --repair
-  - brew install hydrotrend child
+  - brew install hydrotrend
   - brew test hydrotrend
+  - brew install child --HEAD
   - brew install sedflux --HEAD
   - brew test sedflux
   - brew install cem --HEAD
@@ -17,5 +18,6 @@ install:
   - brew install aquatellus --HEAD
   - brew install flowvel2d --HEAD
   - brew install csdms/models/storm --HEAD
+  - brew test csdms/models/storm
   - brew install flex1d flex2d flex2d-adi --HEAD
-  - brew install ltrans marssim --HEAD
+  - brew install marssim --HEAD
